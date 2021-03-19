@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboSphere.Discord", "RoboSphere.Discord\RoboSphere.Discord.csproj", "{D7A9F012-F4C3-4535-B8F4-D24249748ADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A9F012-F4C3-4535-B8F4-D24249748ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A9F012-F4C3-4535-B8F4-D24249748ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A9F012-F4C3-4535-B8F4-D24249748ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A9F012-F4C3-4535-B8F4-D24249748ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
