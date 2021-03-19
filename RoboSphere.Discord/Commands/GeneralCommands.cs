@@ -30,13 +30,19 @@ namespace RoboSphere.Discord.Commands
         public async Task<IResult> About()
         {
             var msgReference = new Optional<IMessageReference>();
-            if(Context is MessageContext msgContext)
+            if (Context is MessageContext msgContext)
             {
                 msgReference = new MessageReference(msgContext.MessageID, Context.ChannelID, msgContext.Message.GuildID, false);
             }
-            return await ChannelApi.CreateMessageAsync(Context.ChannelID, $"Robo-Sphere v{Assembly.GetExecutingAssembly().GetName().Version} ({GitHelper.GetHash(Environment.CurrentDirectory)} @ {Environment.MachineName})\n{Environment.OSVersion.VersionString} .NET {Environment.Version}", messageReference: msgReference);
+
+#if DEBUG
+            var release = "Debug";
+#else
+            var release = "Release";
+#endif
+            return await ChannelApi.CreateMessageAsync(Context.ChannelID, $"Robo-Sphere v{Assembly.GetExecutingAssembly().GetName().Version} ({GitHelper.GetHash(Environment.CurrentDirectory)} @ {Environment.MachineName})\n{Environment.OSVersion.VersionString} .NET {Environment.Version} {release}", messageReference: msgReference);
         }
-        
+
         [Command("ping")]
         public async Task<IResult> Ping()
         {

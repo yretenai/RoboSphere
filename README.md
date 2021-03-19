@@ -2,7 +2,7 @@
 
 Currently does !!absolutely nothing!!
 
-It's a general purpose bot built using [Remora.Discord](https://github.com/Nihlus/Remora.Discord).
+It's a general purpose Discord chatbot built using [Remora.Discord](https://github.com/Nihlus/Remora.Discord).
 
 It's main goal is to provide realtime game data tracking.
 

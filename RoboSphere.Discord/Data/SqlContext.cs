@@ -1,12 +1,14 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 using RoboSphere.Discord.Data.Models;
+using System;
 
 namespace RoboSphere.Discord.Data
 {
     [PublicAPI]
     public class SqlContext : DbContext
     {
+        public SqlContext() => RoboSettings = Discord.Settings.Default;
         public SqlContext(Settings settings) => RoboSettings = settings;
 
         private Settings RoboSettings { get; }
